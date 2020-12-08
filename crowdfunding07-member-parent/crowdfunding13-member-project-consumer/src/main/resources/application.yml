@@ -1,0 +1,30 @@
+server:
+  port: 9002
+
+spring:
+  application:
+    name: member-project-consumer
+  session:
+    store-type: redis
+
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://eureka7001.com:7001/eureka/
+  instance:
+    instance-id: project9002
+    prefer-ip-address: true
+
+ribbon:
+  ReadTimeout: 20000
+  ConnectTimeout: 10000
+
+aliyun:
+  oss:
+    endpoint: http://oss-cn-beijing.aliyuncs.com
+    access-key-id: LTAI4G4y6vwxy7ykmjwcvBEy
+    access-key-secret: pW7FaKqfO0CTWP7rbdlUS215BoQkBQ
+    bucket-name: keikain-bucket-1
+    bucket-domain: http://keikain-bucket-1.oss-cn-beijing.aliyuncs.com

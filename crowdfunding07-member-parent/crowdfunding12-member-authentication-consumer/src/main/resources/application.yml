@@ -1,0 +1,22 @@
+server:
+  port: 9001
+
+spring:
+  application:
+    name: member-authentication-consumer
+  session:
+    store-type: redis
+
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://eureka7001.com:7001/eureka/
+  instance:
+    instance-id: authentication9001
+    prefer-ip-address: true
+
+ribbon:
+  ReadTimeout: 20000
+  ConnectTimeout: 10000
